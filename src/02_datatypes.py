@@ -15,7 +15,14 @@ y = "7"
 
 # YOUR CODE HERE
 
+#int() change variable to interger
+#str() changes variable to a string
+#{} - are pythons version of `` (temperate literals)
+print(f"{x + int(y)  } ")
+
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+
+print(f"{str(x)}{y}")
