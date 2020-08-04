@@ -45,13 +45,19 @@ from datetime import datetime
 # if argv length is 2 , argv[1] = should be 1 thru 12 and is the month --> do that month and current year
 # if argv length is 3, argv[2] = year 4 digits --> do the month and year user inputted
 
-x = datetime.now()
 
+# x = current date and time
+x = datetime.now() 
+
+# if the length of sys.argv is 1 (always 1 because filename is there) that means no arguments passed. Give a calender with the current x.month and a.year. prmonthly = 
 if(len(sys.argv) == 1):
     calendar.prmonth(x.year, x.month)
 elif(len(sys.argv) == 2):
+  #if the length of sys.argv is 2 (filename and month (integer inputed by user), no year). Give user inputted month and current x.year
     calendar.prmonth(x.year, int(sys.argv[1]))
+#if the length of sys.argv is 3 (filename and userinputed both month and year). Give user inputted month and year calendar
 elif(len(sys.argv) == 3):
     calendar.prmonth(int(sys.argv[2]), int(sys.argv[1]))
 else:
-    print('Enter the month and year as m/yyyy')
+  #otherwise give this prompt if they entered something strange
+    print('Enter the month and year as m yyyy or mm yyyy ex. 4 2000 or 05 0001')
