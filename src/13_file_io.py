@@ -10,6 +10,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
+f = open('src/foo.txt', 'r')
+file = f.read()
+print('Reade foo txt: ', file)
+f.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -17,3 +21,10 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+f = open('src/bar.txt', 'w')
+f.write('This is a test line 1\n This is another test line 2\n This is the last test line3')
+f.close()
+f = open('src/bar.txt', 'r')
+file = f.read()
+print('Read Bar txt: ', file)
+f.close()
