@@ -10,9 +10,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-f = open('src/foo.txt', 'r')
+f = open('foo.txt', 'r')
 file = f.read()
-print('Reade foo txt: ', file)
+print('Read foo txt: ', file)
 f.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -21,10 +21,10 @@ f.close()
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-f = open('src/bar.txt', 'w')
+f = open('bar.txt', 'w')
 f.write('This is a test line 1\n This is another test line 2\n This is the last test line3')
 f.close()
-f = open('src/bar.txt', 'r')
+f = open('bar.txt', 'r')
 file = f.read()
 print('Read Bar txt: ', file)
 f.close()

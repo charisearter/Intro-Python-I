@@ -39,3 +39,7 @@ print('Current Working Directory: ', os.getcwd())
 # YOUR CODE HERE
 import getpass
 print('Username:', getpass.getuser())
+
+#or root === admin
+
+print('otherway to get username: ', os.getlogin())
