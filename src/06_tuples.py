@@ -17,12 +17,14 @@ automatically.
 
 import math
 
+
 def dist(a, b):
     """Compute the distance between two x,y points."""
     x0, y0 = a  # Destructuring assignment
     x1, y1 = b
 
     return math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
+
 
 a = (2, 7)   # <-- x,y coordinates stored in tuples
 b = (-14, 72)
@@ -31,15 +33,17 @@ b = (-14, 72)
 print("Distance is: {:.2f}".format(dist(a, b)))
 
 
-
 # Write a function `print_tuple` that prints all the values in a tuple
 
 # YOUR CODE HERE
 
 t = (1, 2, 5, 7, 99)
+
+
 def print_tuple(t):  # Prints 1 2 5 7 99, one per line
-  for num in t:
-      print(num)
+    for num in t:
+        print(num)
+
 
 print_tuple(t)
 
@@ -47,3 +51,30 @@ print_tuple(t)
 # Declare a tuple of 1 element then print it
 u = (1,)  # What needs to be added to make this work?
 print_tuple(u)
+
+# print each on new line
+a = ["Joe", "2", "Ted", "4.98", "14", "Sam",
+     "void *", "42", "float", "pointers", "5006"]
+
+
+def print_list(list):
+    for item in a:
+        print(item)
+
+
+print_list(a)
+
+list2 = ['Bob', 'Slack', ['reddit', '89', 101, [
+    'alacritty', '(brackets)', 5, 375]], 0, ['{slice, owned}'], 22]
+
+
+def print_list2(list2):
+    for item in list2:  # goes thru list
+        if isinstance(item, list):  # checks if item is a list
+            # if item is list print method calls itself and repeats everything
+            print_list2(item)
+        else:
+            print(item)  # otherwise print as normal
+
+
+print_list2(list2)
